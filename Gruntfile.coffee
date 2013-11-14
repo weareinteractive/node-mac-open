@@ -26,24 +26,24 @@ module.exports = (grunt) ->
         files:
           "lib/<%= pkg.name %>.js": "src/<%= pkg.name %>.coffee"
 
-    mochaTest:
-      test:
+    mochacov:
+      options:
+        bail: true
+        ui: 'exports'
+        require: 'coffee-script'
+        compilers: ['coffee:coffee-script']
+        files: 'test/specs/**/*.coffee'
+      all:
         options:
-          bail: true
-          ui: 'exports'
-          require: 'test/coverage'
-        src: ['test/**/*.coffee']
-      'html-cov':
+          reporter: 'spec'
+      coverage:
         options:
-          quiet: true
+          coveralls:
+            serviceName: 'travis-ci'
+      htmlcoverage:
+        options:
           reporter: 'html-cov'
-          captureFile: 'test/coverage.html'
-        src: ['test/specs/**/*.test.coffee']
-      'coveralls-cov':
-        options:
-          quiet: true
-          reporter: 'mocha-lcov-reporter'
-        src: ['test/specs/**/*.test.coffee']
+          output: 'test/coverage.html'
 
     bump:
       options:
@@ -53,11 +53,12 @@ module.exports = (grunt) ->
         files: ['package.json']
 
   # Load npm tasks.
-  grunt.loadNpmTasks "grunt-mocha-test"
+  grunt.loadNpmTasks "grunt-mocha-cov"
   grunt.loadNpmTasks "grunt-coffeelint"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-bump"
 
   # Default task.
   grunt.registerTask "default", ["coffeelint", "coffee"]
-  grunt.registerTask "test", ["default", "mochaTest"]
+  grunt.registerTask "test", ["default", "mochacov:all", "mochacov:htmlcoverage"]  grunt.registerTask "test:travis", ["default", "mochacov:all", "mochacov:coverage"]
+  grunt.registerTask "test:travis", ["default", "mochacov:all", "mochacov:coverage"]

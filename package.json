@@ -32,14 +32,15 @@
     "chai": "~1.8.0",
     "grunt": "~0.4.1",
     "grunt-coffeelint": "~0.0.7",
-    "grunt-mocha-test": "~0.7.0",
     "grunt-contrib-coffee": "~0.7.0",
-    "mocha-lcov-reporter": "0.0.1",
-    "grunt-bump": "0.0.11",
-    "coveralls": "~2.3.0",
-    "blanket": "~1.1.5"
+    "grunt-mocha-cov": "0.0.7",
+    "coffee-script": "~1.6.3",
+    "grunt-bump": "0.0.11"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test:travis",
+    "blanket": {
+      "pattern": ["mac-open/lib"]
+    }
   }
 }
