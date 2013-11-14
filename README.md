@@ -1,5 +1,7 @@
 # node-mac-open
 
+[![Build Status](https://travis-ci.org/weareinteractive/node-mac-open.png?branch=master)](https://travis-ci.org/weareinteractive/node-mac-open) [![devDependency Status](https://david-dm.org/weareinteractive/node-mac-open/dev-status.png)](https://david-dm.org/weareinteractive/node-mac-open#info=devDependencies)
+
 > Opens files via Mac OS's open Shell Command.
 > By default, opens each file using the default application for that file.
 > If the file is in the form of a URL, the file will be opened as a URL.
@@ -58,9 +60,5 @@ Options:
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/gruntjs/grunt).
 
-## Release History
-_(Nothing yet)_
-
 ## License
-Copyright (c) 2013 franklin
-Licensed under the MIT license.
+Copyright (c) 2013 We Are Interactive under the MIT license.
