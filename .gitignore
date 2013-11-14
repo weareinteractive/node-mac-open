@@ -1,0 +1,8 @@
+.*
+*~
+/node_modules
+/test/coverage.html
+/node_modules
+!.travis.yml
+!.npmignore
+!.git*
