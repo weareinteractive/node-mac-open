@@ -47,12 +47,11 @@ module.exports = (grunt) ->
           output: 'test/coverage.html'
 
     # Deployment
-    bump:
+    bumper:
       options:
-        pushTo: 'origin'
-        commitFiles: ['-a']
-        updateConfigs: ['pkg']
-        files: ['package.json']
+        tasks: ["default"]
+        files: ["package.json"]
+        updateConfigs: ["pkg"]
 
   # Load npm tasks.
   grunt.loadNpmTasks "grunt-mocha-cov"

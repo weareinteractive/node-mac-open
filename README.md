@@ -40,7 +40,7 @@ Options:
 
 ```
 
-## Example Usage
+## Usage Examples
 
 Install the module with: `npm install mac-open`
 
