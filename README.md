@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/weareinteractive/node-mac-open.png?branch=master)](https://travis-ci.org/weareinteractive/node-mac-open)
 [![Coverage Status](https://coveralls.io/repos/weareinteractive/node-mac-open/badge.png?branch=master)](https://coveralls.io/r/weareinteractive/node-mac-open?branch=master)
 [![Dependency Status](https://gemnasium.com/weareinteractive/node-mac-open.png)](https://gemnasium.com/weareinteractive/node-mac-open)
+[![NPM version](https://badge.fury.io/js/mac-open.png)](http://badge.fury.io/js/mac-open)
 
 > Opens files via Mac OS's open Shell Command.
 > By default, opens each file using the default application for that file.

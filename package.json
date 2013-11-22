@@ -3,7 +3,6 @@
   "description": "Opens files from a shell via mac's open command.",
   "version": "0.1.0",
   "homepage": "https://github.com/weareinteractive/node-mac-open",
-  "main": "lib/mac-open.js",
   "author": {
     "name": "franklin",
     "email": "franklin@weareinteractive.com",
