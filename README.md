@@ -1,4 +1,4 @@
-# node-mac-open
+# mac-open
 
 [![Build Status](https://travis-ci.org/weareinteractive/node-mac-open.png?branch=master)](https://travis-ci.org/weareinteractive/node-mac-open)
 [![Coverage Status](https://coveralls.io/repos/weareinteractive/node-mac-open/badge.png?branch=master)](https://coveralls.io/r/weareinteractive/node-mac-open?branch=master)
@@ -12,28 +12,9 @@
 open command take a look at [node-open](https://github.com/pwnall/node-open). The
 difference is, that this command allows for options to pass to the open command.*
 
-## Usage
-
-Install the module with: `npm install mac-open`
-
-```javascript
-var open = require('mac-open');
-
-// Open URL with default Browser
-open("http://www.google.com");
-
-// Open file with Finder
-open("/path/to/folder/file", { a: "Finder" }, function(error) {});
-
-// Open file with Sublime Text in the background
-open("/path/to/folder/file", { a: "Sublime Text 2", g: true }, function(error) {});
-```
-
 ## Options
 
 All options are passed directly to the `open` command.
-
-To see the list of options run:
 
 ```
 $ open
@@ -57,6 +38,23 @@ Options:
       -g, --background  Does not bring the application to the foreground.
       -h, --header      Searches header file locations for headers matching the given filenames, and opens them.
 
+```
+
+## Example Usage
+
+Install the module with: `npm install mac-open`
+
+```javascript
+var open = require('mac-open');
+
+// Open URL with default Browser
+open("http://www.google.com");
+
+// Open file with Finder
+open("/path/to/folder/file", { a: "Finder" }, function(error) {});
+
+// Open file with Sublime Text in the background
+open("/path/to/folder/file", { a: "Sublime Text 2", g: true }, function(error) {});
 ```
 
 ## Contributing

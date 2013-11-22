@@ -1,21 +1,14 @@
 {
   "name": "mac-open",
-  "version": "0.1.0",
   "description": "Opens files from a shell via mac's open command.",
-  "main": "lib/mac-open",
+  "version": "0.1.0",
+  "homepage": "https://github.com/weareinteractive/node-mac-open",
+  "main": "lib/mac-open.js",
   "author": {
     "name": "franklin",
     "email": "franklin@weareinteractive.com",
     "url": "http://wwww.weareinteractive.com/"
   },
-  "keywords": [
-    "mac",
-    "url",
-    "open",
-    "file",
-    "browser",
-    "application"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/weareinteractive/node-mac-open.git"
@@ -26,25 +19,37 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/weareinteractive/node-mac-open/blob/master/LICENSE"
+      "url": "https://github.com/weareinteractive/node-mac-open/blob/master/LICENSE-MIT"
     }
   ],
+  "main": "lib/mac-open",
   "engines": {
-    "node": ">= 0.6.0"
-  },
-  "devDependencies": {
-    "chai": "~1.8.0",
-    "grunt": "~0.4.1",
-    "grunt-coffeelint": "~0.0.7",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-mocha-cov": "0.0.7",
-    "coffee-script": "~1.6.3",
-    "grunt-bump": "0.0.11"
+    "node": ">= 0.8.0"
   },
   "scripts": {
     "test": "grunt test:travis",
     "blanket": {
       "pattern": ["mac-open/lib"]
     }
-  }
+  },
+  "devDependencies": {
+    "chai": "~1.8.0",
+    "grunt-coffeelint": "~0.0.7",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-mocha-cov": "0.0.7",
+    "coffee-script": "~1.6.3",
+    "grunt-bumper": "~1.0.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "mac",
+    "url",
+    "open",
+    "file",
+    "browser",
+    "application"
+  ]
 }

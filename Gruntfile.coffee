@@ -26,6 +26,7 @@ module.exports = (grunt) ->
         files:
           "lib/<%= pkg.name %>.js": "src/<%= pkg.name %>.coffee"
 
+    # Unit tests.
     mochacov:
       options:
         bail: true
@@ -45,6 +46,7 @@ module.exports = (grunt) ->
           reporter: 'html-cov'
           output: 'test/coverage.html'
 
+    # Deployment
     bump:
       options:
         pushTo: 'origin'
@@ -56,9 +58,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-mocha-cov"
   grunt.loadNpmTasks "grunt-coffeelint"
   grunt.loadNpmTasks "grunt-contrib-coffee"
-  grunt.loadNpmTasks "grunt-bump"
+  grunt.loadNpmTasks "grunt-bumper"
 
   # Default task.
   grunt.registerTask "default", ["coffeelint", "coffee"]
-  grunt.registerTask "test", ["default", "mochacov:all", "mochacov:htmlcoverage"]  grunt.registerTask "test:travis", ["default", "mochacov:all", "mochacov:coverage"]
+  grunt.registerTask "test", ["default", "mochacov:all", "mochacov:htmlcoverage"]
   grunt.registerTask "test:travis", ["default", "mochacov:all", "mochacov:coverage"]

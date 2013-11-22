@@ -1,8 +1,7 @@
 .*
 *~
 /node_modules
-/test/coverage.html
-/node_modules
+/npm-debug.log
 !.travis.yml
 !.npmignore
 !.git*
