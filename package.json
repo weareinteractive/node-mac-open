@@ -1,7 +1,7 @@
 {
   "name": "mac-open",
   "description": "Opens files from a shell via mac's open command.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/weareinteractive/node-mac-open",
   "author": {
     "name": "franklin",
@@ -36,7 +36,7 @@
     "grunt-coffeelint": "~0.0",
     "grunt-contrib-coffee": "~0.10",
     "grunt-mocha-cov": "~0.2",
-    "coffee-script": "~1.6",
+    "coffee-script": "~1.7",
     "grunt-bumper": "~1.0",
     "grunt": "~0.4"
   },
