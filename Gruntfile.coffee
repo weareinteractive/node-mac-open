@@ -40,6 +40,11 @@ module.exports = (grunt) ->
       coverage:
         options:
           coveralls: true
+      htmlcoverage:
+        options:
+          reporter: 'html-cov'
+          output: 'test/coverage.html'
+          src: ["mac-open/lib"]
 
     # Deployment
     bumper:
@@ -58,5 +63,5 @@ module.exports = (grunt) ->
 
   # Default task.
   grunt.registerTask "default", ["coffeelint", "coffee"]
-  grunt.registerTask "test", ["default", "mochacov:test"]
-  grunt.registerTask "travis", ["test", "mochacov:coverage"]
+  grunt.registerTask "test", ["default", "mochacov:test", "mochacov:htmlcoverage"]
+  grunt.registerTask "test:travis", ["default", "mochacov:test","mochacov:coverage"]
