@@ -44,7 +44,6 @@ module.exports = (grunt) ->
         options:
           reporter: 'html-cov'
           output: 'test/coverage.html'
-          src: ["mac-open/lib"]
 
     # Deployment
     bumper:
