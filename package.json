@@ -26,10 +26,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test:travis",
-    "blanket": {
-      "pattern": ["mac-open/lib"]
-    }
+    "test": "grunt travis"
   },
   "devDependencies": {
     "chai": "~1.9",
